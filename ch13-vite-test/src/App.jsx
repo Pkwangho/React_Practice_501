@@ -11,6 +11,8 @@ import NotFound from './pages/NotFound';
 import Login from './pages/Login';
 import MyPage from './pages/MyPage';
 import Category from './pages/Category';
+import CategoryDetails from './pages/CategoryDetails';
+import DefaultPage from './pages/DefaultPage';
 
 function App() {
 
@@ -26,7 +28,6 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/profiles/:username" element={<Profile />} />
-          <Route path="/category/:name" element={<Category />} />
         </Route>
         {/* <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} /> */}
@@ -48,6 +49,13 @@ function App() {
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/mypage" element={<MyPage />} />
+        {/* 실습1, Category 라우팅 추가. */}
+        <Route path="/category/:name" element={<Category />} >
+          {/* 실습5, 하위요소 경로가 없을 경우 가는 기본 페이지 */}
+          <Route index element={<DefaultPage />} />
+          {/* 실습3, 중첩 라우팅 예제 */}
+          <Route path="details" element={<CategoryDetails />} />
+        </Route>
       </Routes>
     </>
   )

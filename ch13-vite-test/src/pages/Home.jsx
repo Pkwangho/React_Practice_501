@@ -14,7 +14,7 @@ const Home = () => {
                     <Link to="/profiles/gildong">gildong의 프로필</Link>
                 </li>
                 <li>
-                    <Link to="/profiles/pkh">pkh의 프로필</Link>
+                    <Link to="/profiles/lsy">lsy의 프로필</Link>
                 </li>
                 <li>
                     <Link to="/profiles/void">존재하지 않는 프로필</Link>
@@ -27,6 +27,18 @@ const Home = () => {
                 </li>
                 <li>
                     <Link to="/login">로그인</Link>
+                </li>
+                {/* // 실습1 */}
+                <li>
+                    <Link to="/category/lsy">lsy 카테고리 샘플</Link>
+                </li>
+                {/* 실습2 쿼리스트링*/}
+                <li>
+                    <Link to="/category/lsy?username=이상용">lsy 쿼리스트링 샘플</Link>
+                </li>
+                {/* 실습3 중첩라우팅 확인*/}
+                <li>
+                    <Link to="/category/lsy/details">lsy 중첩라우팅 샘플</Link>
                 </li>
             </ul>
         </div>
